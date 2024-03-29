@@ -64,10 +64,6 @@ a {
     text-decoration: none; /* Remove underline */
 }
 
-
-
-
-
 /* Animations */
 @keyframes cursor-blink {
     0% {
@@ -130,4 +126,19 @@ nav {
 .nav-links:hover {
     background-color: white;
     color: black;
+}
+
+
+
+#cursor {
+    pointer-events: none;
+    margin-top: -25px;
+    margin-left: -25px;
+	position:absolute;
+    width:60px;
+    height:40px;
+    background-color: #00FF29;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
 }
