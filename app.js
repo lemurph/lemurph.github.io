@@ -1,7 +1,15 @@
-var characters = "abcdefghijklmnopqrstuvwxyz#%&^+=-";
-var logo_text = "lemurph";
+const characters = "abcdefghijklmnopqrstuvwxyz#%&^+=-";
+const bits = "01"
+const logo_text = "lemurph";
 let lemurphHovered = false;
 let particles = [];
+
+const canvas = document.getElementById("mainCanvas");
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
+const canvasContext = canvas.getContext("2d");
+canvasContext.font = "21px DOS";
+
 
 $(document).ready(function(){
 
@@ -22,56 +30,46 @@ $(document).ready(function(){
 
 }); 
 
-
-
 document.addEventListener("mousemove", function(event) {
   mouseX = event.pageX;
   mouseY = event.pageY;
-  $("#cursor").css({
-    left: mouseX,
-    top: mouseY
-  })
-  $("#cursor").text(characters.charAt(Math.floor(Math.random() * characters.length)));
-  for (let i=0; i<5; i++) {
-    new Particle(createVector(mouseX, mouseY));
-  }
+  particleText = bits.charAt(Math.floor(Math.random() * bits.length));
+  var particle = new Particle(mouseX, mouseY, particleText);
+  particle.draw();
+  particles.push(particle);
 });
 
 class Particle {
-  constructor(pos) {
-    this.pos = pos;
-    this.sat = 100;
-    this.val = 100;
-    this.lifetime = 100;
-    this.age = 0;
-    particles.push(this);
-  }
-  
-  update() {
-    if (this.age >= this.lifetime) {this.remove()}
-    this.age += 1;
-    if (this.age % 10 == 0) {
-      this.vel.rotate(random([-angle, angle]));
-    }
-    this.pos.add(this.vel);
+  constructor(posX, posY, text) {
+    this.posX = posX;
+    this.posY = posY
+    this.text = text
   }
   
   draw() {
-    push()
-    stroke(this.hue, this.sat, this.val, 1-this.age/this.lifetime);
-    translate(this.pos.x, this.pos.y);
-    line(0, 0, -this.vel.x, -this.vel.y);
-    pop()
+    canvasContext.fillStyle = "white";
+    canvasContext.fillText(this.text, this.posX, this.posY);
   }
   
-  remove() {
+  removeParticle() {
+    console.log("I am being deleted:" + this.text + "at pos " + this.posX + " " + this.posY)
+    canvasContext.fillStyle = "black";
+    canvasContext.fillRect(this.posX-15, this.posY-15, 30, 30);
     particles.splice(particles.indexOf(this), 1);
   }
+
+
 }
 
 setInterval(function() {
+  if (particles.length > 0){
+    particles[0].removeParticle();
+  }
+}, 9);
+
+setInterval(function() {
   if (!lemurphHovered) {
-      randomlogo_text = "";
+    randomlogo_text = "";
   for (let i=logo_text.length; i > 0; i--) {
     randomlogo_text += characters.charAt(Math.floor(Math.random() * characters.length));
   }

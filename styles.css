@@ -120,25 +120,23 @@ nav {
     animation: cursor-blink 1s steps(2) infinite;
 }
 #nav-body {
-    /* background-color: azure; */
     margin-left: 30%;
 }
 .nav-links:hover {
     background-color: white;
     color: black;
 }
-
-
-
-#cursor {
-    pointer-events: none;
-    margin-top: -25px;
-    margin-left: -25px;
-	position:absolute;
-    width:60px;
-    height:40px;
-    background-color: #00FF29;
-    color: white;
+#mainCanvas {
+    position: fixed;
+    z-index : -1;
+}
+.content {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    padding-top: 25px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
