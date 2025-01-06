@@ -73,6 +73,25 @@ a {
         background: white;
     }
 }
+@media screen{
+    .crt {
+      animation: scanlines infinite 4s linear ;
+    }
+} 
+@keyframes scanlines {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 -10px;
+    }
+}
+.canvas-holder {
+    position: fixed;
+}
+#mainCanvas {
+    position: fixed;
+}
 
   
 
@@ -82,10 +101,11 @@ a {
 /* Begin Styling Nav*/
 #panel-left {
     /* background-color: aquamarine; */
-    width: 20%;
+    flex-grow: 0.5;
     color: white;
     height: 100vh;
-
+    width: 25%;
+    position: fixed;
 }
 #panel-left-contents {
     /* background-color: chocolate; */
@@ -95,6 +115,27 @@ a {
     justify-content: space-around;
     height: 40%;
 }
+#panel-middle {
+    /* background-color: darkgrey; */
+    margin-left: 25%;
+}
+.projects {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#projects-header {
+    color: white;
+    text-shadow: 0 0 4px white;
+    margin-top: 10%;
+    font-size: 30px;
+}
+#panel-right {
+    /* background-color: lightgreen; */
+    flex-grow: 0.5;
+}
 nav {
     /* background-color: aqua; */
     width: 120px;
@@ -103,6 +144,7 @@ nav {
     color: #00FF29;
     text-align: center;
     font-size: 40px;
+    text-shadow: 0 0 4px #00FF29;
 }
 #nav-header {
     /* background-color: darkblue; */
@@ -122,15 +164,21 @@ nav {
 #nav-body {
     margin-left: 30%;
 }
-.nav-links:hover {
+#nav-header, .nav-links {
+    text-shadow: 0 0 4px white;
+}
+.nav-links:hover, #nav-header:hover {
     background-color: white;
     color: black;
+    -webkit-text-stroke: 0.5px #00FF29;
 }
+
 #mainCanvas {
     position: fixed;
     z-index : -1;
 }
 .content {
+    display: flex;
     min-width: 100%;
     max-width: 100%;
     margin-left: auto;
@@ -139,4 +187,24 @@ nav {
     position: absolute;
     left: 0;
     right: 0;
+}
+
+.content > div {
+    flex: 1;
+}
+
+.crt {
+    z-index: 1;
+    opacity: 0.1;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #000000, #000000, #bcbcbc, #bcbcbc);
+    background-size: cover;
+    background-size: 100% 6px;
+    pointer-events: none;
 }
