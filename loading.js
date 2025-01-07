@@ -48,7 +48,7 @@ function feedbacker() {
       else {
         textarea.append("<br>Initialising...<br>");
         setTimeout(function() {
-            window.location.href = "index.html";
+          window.location.href = "index.html";
         }, 500);
       }
     },time);

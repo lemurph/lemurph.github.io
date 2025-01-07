@@ -115,55 +115,6 @@ a {
     justify-content: space-around;
     height: 40%;
 }
-#panel-middle {
-    margin-left: 25%;
-}
-#panel-middle-projectspage {
-    margin-left: 25%;
-    background-color: rgb(0, 28, 186);
-    border-style: double;
-    border: 8px double #ffffff;
-    box-shadow: 10px 10px;
-}
-#video-1 {
-    margin-top: 0;
-}
-#video-4 {
-    margin-bottom: 10%;
-}
-.projects {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.projects > div {
-    margin-top: 100px;
-
-}
-#projects-header {
-    color: white;
-    text-shadow: 0 0 4px white;
-    margin-top: 10%;
-    font-size: 30px;
-}
-.project-title {
-    color: white;
-    margin-bottom: 10px;
-}
-.project-title > a:hover {
-    background-color: white;
-    color: black;
-    -webkit-text-stroke: 0.5px rgb(0, 28, 186);
-}
-iframe {
-    border: 8px double #ffffff;
-    box-shadow: 10px 10px;
-}
-#panel-right {
-    /* background-color: rgb(0, 13, 1); */
-    flex-grow: 0.5;
-}
 nav {
     /* background-color: aqua; */
     width: 120px;
@@ -191,6 +142,7 @@ nav {
 }
 #nav-body {
     margin-left: 30%;
+    text-align: left;
 }
 #nav-header, .nav-links {
     text-shadow: 0 0 4px white;
@@ -200,6 +152,103 @@ nav {
     color: black;
     -webkit-text-stroke: 0.5px #00FF29;
 }
+
+/* Main Middle Panel Styling */
+#panel-middle {
+    margin-left: 25%;
+}
+#panel-middle-resume, #panel-middle-projectspage {
+    margin-left: 25%;
+    background-color: rgb(0, 28, 186);
+    border-style: double;
+    border: 8px double #ffffff;
+    box-shadow: 10px 10px;
+}
+
+/* Projects Styling */
+#video-1 {
+    margin-top: 0;
+}
+#video-4 {
+    margin-bottom: 10%;
+}
+.projects {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.projects > div {
+    margin-top: 100px;
+
+}
+#projects-header, #resume-header {
+    color: white;
+    margin-top: 10%;
+    font-size: 30px;
+}
+.project-title {
+    color: white;
+    margin-bottom: 10px;
+}
+.project-title > a:hover {
+    background-color: white;
+    color: black;
+    -webkit-text-stroke: 0.5px rgb(0, 28, 186);
+}
+iframe {
+    border: 8px double #ffffff;
+    box-shadow: 10px 10px;
+}
+#panel-right {
+    /* background-color: rgb(0, 13, 1); */
+    flex-grow: 0.5;
+}
+
+/* Resume Styling */
+#name {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+#work-experience-container, #education-container, #skills-container {
+    color: white;
+    text-align: left;
+}
+#work-experience-header, #education-header, #skills-header {
+    background-color: white;
+    color: black;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+.work-experience, #education, #skills {
+    margin-bottom: 80px;
+}
+.work-place, #university, .skills-type {
+    text-decoration: underline;
+    margin-bottom: 15px;
+    margin-left: 10px;
+
+}
+.work-position, #degree {
+    font-style: italic;
+    margin-bottom: 15px;
+    margin-left: 10px;
+
+}
+.work-responsibilities, #education-accomplishments, #skills-list {
+    margin-left: 40px;
+    list-style-type: square;
+}
+.work-responsibilities > li, #education-accomplishments > li, #skills-list > li {
+    margin-bottom: 10px;
+}
+
+
 
 #mainCanvas {
     position: fixed;
