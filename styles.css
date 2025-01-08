@@ -170,9 +170,6 @@ nav {
 }
 
 /* Index Styling */
-#landing-image1 {
-
-}
 #contact-container {
     align-items: center;
     margin-top: 9%;
@@ -282,7 +279,7 @@ iframe {
     font-size: 30px;
 }
 .work-experience, #education, #skills {
-    margin-bottom: 80px;
+    margin-top: 80px;
 }
 .work-place, #university, .skills-type {
     text-decoration: underline;
