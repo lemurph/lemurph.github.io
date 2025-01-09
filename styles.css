@@ -278,12 +278,12 @@ iframe {
 #work-experience-header, #education-header, #skills-header {
     background-color: white;
     color: black;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 30px;
 }
 .work-experience, #education, #skills {
-    margin-top: 80px;
+    margin-bottom: 80px;
 }
 .work-place, #university, .skills-type {
     text-decoration: underline;
@@ -345,20 +345,23 @@ iframe {
 
 /* Mobile Accessibility */
 @media only screen and (max-width: 600px) {
+
     .content {
-      flex-direction: column;
-      flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     #panel-left, #panel-middle, #panel-right {
         margin: 0;
         flex-grow: 1;
-        width: 100%;
     }
     #panel-middle {
         margin-top: 30%;
+        width: 100%
     }
     #panel-left {
         margin-left: 10%;
+        left:0;
+        top:0;
         height: auto;
     }
     iframe {
