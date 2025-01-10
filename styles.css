@@ -160,6 +160,9 @@ nav {
 }
 #panel-middle-index {
     margin-top: 10%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Index Styling */
@@ -192,18 +195,17 @@ nav {
 }
 #landing-image1 {
     position: relative;
-    left: 80px;
     top: 40px;
 }
 #landing-image2 {
     position: relative;
-    top: -100px;
-    left: 250px;
+    top: -200px;
+    left: 200px;
 }
 #landing-image3 {
     position: relative;
     top: -430px;
-    left: 25px;
+    left: -25px;
 }
 
 /* Projects Styling */
